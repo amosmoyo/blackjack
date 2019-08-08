@@ -210,7 +210,7 @@ function project(){
 	   	    }
 	   	 }else if(dealerScores > playerScores){
 	   	 	let difTwo = dealerScores - playerScores;
-	   	 	if(difTwo < 3 ){
+	   	 	if(difTwo < 2 ){
 	   	 	 playerWon = true;
 	   	 	} 
 	   	 }else if(playerScores === dealerScores){
