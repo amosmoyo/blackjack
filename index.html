@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blackjack Game</title>
+	<link rel = "icon" type = "image/jpg" href = "card.jpg">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<link rel="stylesheet" type="text/css" href="index.css">
+<body>
+<main>
+	<header>
+		<h1>Blackjack</h1>
+		<p class="scratch">Time to scratch your head!</p>
+	</header>
+	<section>
+		<div>
+			<p class="intro">You are only allowed to play the game until the Progress Bar value is equal to 100%. All the best.<br><br><span style="background-color:rgba(255,255,255,.3); margin-top:5px;">Remember! You are the player, You are playing against a virtual dealer</span></p>
+		</div>
+		<div id="dealer-player" class="mainplatform">
+			<div id="dealer" class="platform">
+				<h3 class="titles">Dealer Has:</h3>
+				<p id="dealerText" class="colors"></p>
+				<p id="dealerScore"></p>
+				<div class="flex" id="one">
+					<span id="valueDs" class="flex">0</span>
+					<progress value="0" max="100" id="dealerProgress" class="progres" data-role='score'>
+				</div>				
+			</div>
+			<div id="player" class="platform">
+				<h3 class="titles">Player Has:</h3>				
+                <p id="playerText"></p>
+				<p id="playerScore"></p>
+				<div class="flex" id="two">
+					<span id="valuePs" class="flex">0</span>
+					<progress value="0" max="100" id="playerProgress" class="progres" data-role='score'>
+				</div>
+			</div>
+		</div>
+		<div>
+			<h3 id="win-massage" ></h3>
+		</div>
+		<div>
+			<p id="question"></p>
+			<button id="newGameBtn" class="btn"><strong>Start A New Game</strong></button>
+			<button id="hitBtn" class="btn"><strong>Make a Hit</strong></button>
+			<button id="stayBtn" class="btn"><strong>Stay</strong></button>
+		</div>
+	</section>
+	<footer>
+		<div>
+			<h4 class="Instruction">Instruction</h4>
+			<div class="hide">
+				<h5>Introduction</h5>
+				<p>Blackjack is a simple webApp that resembles the normal Rummy Card Game.You are the player while the Computer is the Dealer.</p>
+				<h5>How to play</h5>
+				<p>Every time you start a new game round, the  virtual cards get shuffled. Each card has an associated value.<span>The Start or Start New Game Button</span> Indicates the start of a new game or game round. The<span>Hit Button</span> allows you to pick a card.The <span>Stay Button </span> indicate that you are not picking a card.</p>
+				<h5>How to win</h5>
+				<p>The maximum score the dealer or the player can have is <strong>21</strong>. If the dealers value is greater than 21 then the Player has won and vise versa. if(playerScore > dealerScore) and the difference in there point is less than <strong>3</strong> then the Player is said to have won and vice versa.</p>
+				<div class="code">
+				<code>
+if(gameOver){<br>
+   	if(playerScores === 21){<br>
+   	 	playerWon = true;<br>
+   	}else if(dealerScores === 21){<br>
+        playerWon = false;<br>
+   	}else if(playerScores > dealerScores){<br>
+   	 	let dif = playerScores - dealerScores;<br>
+   	 	if(dif < 3){<br>
+   	 	playerWon = true;<br>
+   	    }
+   	}else if(dealerScores > playerScores){<br>
+   	    let difTwo = dealerScores - playerScores;<br>
+   	 	 if(difTwo < 3 ){<br>
+   	 	  playerWon = true;<br>
+   	 	}<br>
+   	}<br>
+}   	
+				</code>
+			    </div>
+			</div>
+		</div>
+		<div id="details">
+			<p class="comment">&copy: <span>CROMO-Amos-Moyo</span><br><span>Email: <a href="#">amosmoyo5300@gmail.com</a></span><br><span>Contacts:+254710510906</span></p>
+		</div>
+		<p class="comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente saepe, facere delectus. Nulla hic fugiat incidunt unde dolor ullam excepturi cupiditate. At dicta possimus vero facere, minima similique ipsa eum molestias eius impedit eaque, non quidem porro voluptatibus ullam officiis quod vitae placeat, nulla quo eligendi perferendis dolore esse! Asperiores.</p>
+	</footer>
+</main>
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>

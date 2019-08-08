@@ -1,0 +1,279 @@
+*{
+	margin:0; padding:0;
+}
+h1{
+	color:red; letter-spacing:3px;
+}
+.flex{
+	background-color:rgba(255,255,0,.1); color:blue; font-weight:bold; font-size:1.2em;
+}
+.round{
+	color:green; font-size:1.2em;
+}
+#valuePs,#valueDs{
+	background-color:rgba(255,255,0,.9);
+}
+#dealer-player{
+	display:grid;
+}
+#dealer{
+	grid-area:deal;
+	background-color:#ffffff;
+}
+#player{
+	grid-area:play;
+	background-color:#CEDEE2;
+}
+.mainplatform{
+	background-image:url(pack2.gif); width:96%; min-height:250px;
+	background-size:cover;
+	background-repeat:no-repeat; margin:2px auto 15px auto;
+}
+#dealerText,#playerText{
+	color:blue; font-weight:bold;
+}
+#playerText{
+	background-color:rgba(103, 235, 134,.9);
+}
+#dealerText{
+	background-color:rgba(255,255,0,.9);
+}
+#dealerScore,#playerScore{
+	color:red;
+}
+header{
+	height:100px; overflow:hidden; background-color:rgba(0,0,0,.6);
+}
+header .scratch{
+	margin:10px 5px; color:#ffffff; font-family:monospace;
+	animation-name:Text;animation-duration:2s; animation-delay:0s; animation-iteration-count:infinite;
+	animation-timing-function:linear; animation-direction:normal;
+	background-color:rgba(255,255,255,.2); height:20px; border-radius:5px;
+	padding-left:3px;	
+}
+@keyframes Text{
+	0%{
+		color:rgb(188, 87, 235);
+	}
+	25%{
+		color:rgb(87, 121, 235);
+	}
+	50%{
+		color:rgb(235, 235, 87);
+	}
+	75%{
+		color:rgb(255, 255, 255);
+	}
+	100%{
+		color:rgb(224, 43, 58);
+	}
+}
+.intro{
+	margin:10px 10px; color:#ffffff; font-family:monospace;background-color:rgba(0,0,0,.7);
+	border-radius:5px; padding:5px; box-sizing:border-box;
+	box-shadow:1px -2px 1px 1px #fff,0px 2px 1px 1px #fff;
+}
+section{
+	overflow:hidden; margin-bottom:0px;
+}
+footer .comment{
+    text-align:center; color:#ffffff; margin:20px 0px 10px 0px; padding:5px; box-sizing:border-box;
+    background:linear-gradient(#000 20%, transparent 100%);font-family:monospace;
+}
+footer div{
+	margin:10px 5px 0px 5px;
+}
+footer div .Instruction{
+	color:white; background-color:#999; border:1px solid #fff; width:100%;
+	transition:0.1s; font-family:monospace; border-radius:5px; height:25px;
+	padding:2px; box-sizing:border-box;
+	box-shadow:0px -2px 5px rgba(0,0,0,.25) inset; margin-top:20px;
+}
+.active,.Instruction:hover{
+   background-color:rgba(134, 199, 209); padding:4px 0px;
+}
+.Instruction:after{
+	content: "\02795";/*Unicode adding plus sign*/
+	font-size:10px;
+	float:right;
+	color:red;
+	margin-right:10px;
+}
+.active:after{
+	content:"\2796"; /*Unicode sign for minus*/
+	margin-right:10px;
+	color:red;
+	font-size:10px;
+		 
+}
+footer div .hide{
+	background-color:#fff; padding:5px 1px; width:98%; display:none; margin:0 auto;
+	box-shadow:-1px 1px 1px 1px green inset,1px -1px 1px 1px green inset;font-family:monospace;
+}
+h1{
+	text-align:center; margin-top:20px; text-shadow:2px 2px 2px blue,2px 2px 1px green;
+	text-decoration:line-through; text-transform:capitalize;
+}
+.titles{
+	text-align:center; width:90%; margin:10px auto;
+    box-shadow:3px 3px 1px 1px red,-4px -2px 1px 1px green;
+    border-radius:5px;
+}
+#playerScore,#dealerScore{
+	margin-top:10px; margin-bottom:5px;
+}
+#win-massage{
+	background-color:#A6E5E4; text-align:center; margin:5px; font-family:monospace;
+}
+.bold{
+	font-size:1.4em; font-weight:bold; color:#000;
+}
+.btn{
+	font-family:monospace;
+}
+.btn:hover{
+   background-color:red;
+}
+.progres[value]{
+   background-color:blue; appearance:none; border:none;
+}
+.invisible-platformD{
+	background-image:url(dealer2.gif) !important;background-size:100% 100%;
+	background-repeat:no-repeat; margin:2px auto 15px auto;width:96%; min-height:250px;
+}
+.invisible-platformD::after{
+   content:'The dealer won all the nine games' width:50px; color:#ffffff; height:100px;
+}
+.invisible-platformP{
+	background-image:url(player.gif) !important;background-size:cover;
+	background-repeat:no-repeat; margin:2px auto 15px auto;width:96%; min-height:250px;	
+}
+.plat{
+	height:100px !important;
+}
+.animation{
+	animation-name:amos;animation-duration:2s; animation-delay:0s; animation-iteration-count:infinite;
+	animation-timing-function:linear; animation-direction:normal;
+}
+@keyframes amos{
+	0%{
+		background-color:rgba(188, 87, 235);
+	}
+	25%{
+		background-color:rgba(87, 121, 235);
+	}
+	50%{
+		background-color:rgba(235, 235, 87);
+	}
+	75%{
+		background-color:rgba(235, 87, 171);
+	}
+	100%{
+		background-color:rgba(224, 43, 58);
+	}
+}
+[data-role='score']{
+	-webkit-appearance:none; appearance:none;
+    border:none;/*firefox is same as appearance none:*/
+	height:20px;
+}
+progress[value]::-moz-progress-bar { 
+  background-image:
+    -moz-linear-gradient(
+      135deg, 
+      transparent 33%, 
+      rgba(0, 0, 0, 0.1) 33%, 
+      rgba(0, 0, 0, 0.1) 66%, 
+      transparent 66% 
+    ),
+    -moz-linear-gradient(
+      top, 
+      rgba(255, 255, 255, 0.25), 
+      rgba(0, 0, 0, 0.25)
+    ),
+    -moz-linear-gradient(
+      left, 
+      #09c, 
+      #f44
+    );
+
+  border-radius: 2px; 
+  background-size: 35px 20px, 100% 100%, 100% 100%; 
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 2px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9) inset;
+}
+.comment a{
+  text-decoration:none; color:red; background-color:rgba(255,255,255,.4);
+}
+.comment a:hover{
+	background-color:rgba(255,255,255,.9); color:green;
+}
+code{
+	color:red; background-color:#fff;
+}
+.code{
+	background-color:#555;
+}	
+.hide span{
+   background-color:#67eb8a; color:blue;
+}
+.hide h5{
+	color:red; background-color:#999;
+}
+.hide h5, .hide p,.hide div{
+	margin:2px 3px;
+}
+@media screen and (max-width:600px){
+	#dealer-player{
+		grid-template-columns:1fr;
+		grid-template-rows:auto;
+		grid-template-areas:
+		'deal'
+		'play';
+	}
+	main{
+		width:95%; margin:10px auto; background-color:rgba(0,0,0,.6);
+	}
+	.btn{
+		padding:10px 15px; margin-left:5px; border-radius:5px;
+	}
+	.platform{
+		visibility:hidden; opacity:.9; text-align:center; font-family:monospace;
+	}
+}
+@media screen and (min-width:600px){
+	#dealer-player{
+		grid-template-columns:1fr 1fr;
+		grid-template-rows:auto;
+		grid-template-areas:
+		'deal play';
+	}
+	main{
+		width:90%; margin:10px auto; background-color:rgba(0,0,0,.5);
+	}	
+	.mainplatform{
+		background-size:100% 100%;
+	}
+	.platform{
+		visibility:hidden; opacity:0.8; text-align:center; font-family:monospace;
+	}
+    #win-massage{
+	   background-color:#A6E5E4; text-align:center; margin:5px auto; width:70%;
+    }	
+	.btn{
+		padding:15px 20px; margin-left:10px; border-radius:7px;
+	}		
+}
+
+@media screen and (min-width:768px){
+	main{
+		width:60%; margin:10px auto; background-color:rgba(0,0,0,.6);
+	}
+	footer{
+		margin-top:20px; min-height:120px; overflow:hidden;
+	}
+}
